@@ -1,0 +1,303 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: #AFD5EB;
+        height: 100vh;
+    }
+    
+    #img {
+        padding-right: 0.25rem;
+    }
+    
+    #img:hover {
+        animation-name: rotate;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 2.5s;
+        transform: rotateY(0deg);
+        transform-style: preserve-3d;
+    }
+    
+    @keyframes rotate {
+        0% {
+            transform: rotate3d(0, 1, 0, 0deg);
+        }
+        50% {
+            transform: rotate3d(0, 1, 0, 180deg);
+        }
+        100% {
+            transform: rotate3d(0, 1, 0, 360deg);
+        }
+    }
+    
+    #nav-bar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+    }
+    
+    #nav-bar>* {
+        width: 25%;
+        float: left;
+        color: #AFD5EB;
+        font-size: 2.5vmin;
+        font-family: 'Source Code Pro', monospace;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        padding: 1rem;
+        background: linear-gradient(#AFD5EB, #1073E5);
+    }
+    
+    #nav-bar a:hover {
+        background: linear-gradient(#AFD5EB 100%, #1073E5);
+        color: black;
+    }
+    
+    .body-container {
+        width: 80%;
+        margin: auto;
+        margin-top: 30vmin;
+        animation: fadeIn linear 1s;
+    }
+    
+    .body-container h1 {
+        font-size: 12vmin;
+        font-weight: bold;
+        padding: 0.5rem;
+        font-family: 'Crimson Pro', serif;
+    }
+    
+    .body-container h3 {
+        font-size: 5vmin;
+        font-family: 'Crimson Pro', serif;
+        padding: 0.5rem;
+        margin-left: 0.75rem;
+    }
+    
+    #box {
+        width: 45%;
+        height: 30vh;
+        padding: 0.75rem;
+        margin-left: 1rem;
+        margin-top: 10vmin;
+        float: right;
+        border: 3px inset #1073E5;
+        color: black;
+    }
+    
+    #box h2 {
+        font-family: 'Anton', sans-serif;
+        font-size: 5vmin;
+    }
+    
+    #box p {
+        font-size: 3vmin;
+        font-family: 'Crimson Pro', serif;
+        font-weight: bold;
+        margin-top: 2vmin;
+    }
+    
+    #box:hover {
+        background-color: #1073E5;
+        color: white;
+    }
+    
+    .form {
+        width: 90vmin;
+        margin: auto;
+        margin-top: 15vmin;
+    }
+    
+    .form label {
+        display: block;
+        margin-top: 3.5vmin;
+        font-family: 'Crimson Pro', serif;
+        font-weight: bold;
+        font-size: 3.5vmin;
+    }
+    
+    .form input:not([type="submit"]) {
+        display: block;
+        width: 100%;
+        height: 5vh;
+        margin-top: 1vmin;
+        padding-left: 0.75rem;
+        font-size: 2.5vmin;
+        font-weight: bold;
+        font-family: 'Source Code Pro', monospace;
+        border-radius: 0.3rem;
+        border-color: white;
+        outline-color: #1073E5;
+        outline-offset: 1.3px;
+    }
+    
+    .form select {
+        display: block;
+        width: 100%;
+        height: 5vh;
+        margin-top: 1vmin;
+        padding-left: 0.75rem;
+        font-size: 2.5vmin;
+        font-weight: bold;
+        font-family: 'Source Code Pro', monospace;
+        outline-color: #1073E5;
+        outline-offset: 1.3px;
+        border-radius: 0.3rem;
+    }
+    
+    .required-error {
+        color: rgb(231, 59, 59);
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 2.5vmin;
+        padding-top: 0.25rem;
+    }
+    
+    .form li {
+        list-style: none;
+    }
+    
+    .submit-button {
+        display: block;
+        font-family: 'Source Code Pro', monospace;
+        font-size: 3vmin;
+        font-weight: bold;
+        height: 5vh;
+        width: 70%;
+        margin-top: 3vmin;
+        margin-left: 15%;
+        background-color: #AFD5EB;
+        color: black;
+        border: 2px inset #1073E5;
+        border-radius: 0.75rem;
+    }
+    
+    .submit-button:hover {
+        color: white;
+        background-color: #1073E5;
+    }
+    
+    #about-container {
+        background-color: white;
+        width: 100vmin;
+        min-height: 90vh;
+        margin: auto;
+        margin-top: 15vmin;
+        padding: 0.75rem;
+        animation: fadeIn linear 1s;
+    }
+    
+    #about-container h2 {
+        color: #AFD5EB;
+        font-family: 'Crimson Pro', serif;
+    }
+    
+    #about-container p {
+        margin-top: 1vh;
+        font-family: 'Source Code Pro', monospace;
+    }
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    #res-container h1 {
+        font-size: 20vmin;
+        font-weight: bold;
+        text-align: center;
+        padding: 1rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    #res-container h2 {
+        font-size: 5vmin;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        padding: 1.5rem;
+        margin-top: -20px;
+    }
+    
+    #res-container p {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 3vmin;
+        padding: 0.5rem;
+    }
+    
+    #res-container a {
+        color: black;
+        font-size: 5vmin;
+        text-decoration: none;
+    }
+    
+    #res-container a:hover {
+        text-decoration-line: underline;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 3px;
+    }
+    
+    #res-container {
+        width: 80%;
+        margin: auto;
+        margin-top: 8%;
+    }
+    
+    #res-container li {
+        list-style: none;
+        font-size: 4vmin;
+        padding: 0.5rem;
+        font-family: 'Crimson Pro', serif;
+        font-weight: bold;
+        color: #1073E5;
+        text-align: center;
+    }
+    
+    #result-container {
+        margin: auto;
+        width: 100vmin;
+        min-height: 25vh;
+        margin-top: 20vmin;
+    }
+    
+    #result {
+        background-color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 2em;
+        margin-top: 5vmin;
+        background: linear-gradient(to right, #AFD5EB, white)
+    }
+    
+    #result>* {
+        font-size: 5vmin;
+        font-family: 'Crimson Pro', serif;
+        font-weight: bold;
+        color: black;
+        padding: 0.5rem;
+    }
+    
+    #result button {
+        font-size: 5vmin;
+        font-family: 'Crimson Pro', serif;
+        font-weight: bold;
+        color: black;
+        padding: 0.1rem;
+        margin-left: 1vmin;
+        border: none;
+        background-color: transparent;
+    }
+    
+    #result button:hover {
+        cursor: pointer;
+        color: #1073E5;
+    }

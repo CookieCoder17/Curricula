@@ -1,0 +1,24 @@
+<div id="result-container">
+    <% data.forEach(function(i){%>
+        <div id="result">
+            <div> Course:
+                <%=i.courseSubject%>
+                    <%=i.catalogNumber %>
+            </div>
+            <div>Semester:
+                <%=i.semester %>
+            </div>
+            <div>Year:
+                <%=i.year %>
+            </div>
+            <div>
+                <button onclick="download('<%=i.filename %>')">View Syllabus</button>
+            </div>
+        </div>
+        <% }); %>
+</div>
+<script>
+    function download(file) {
+        window.open("/uploads/".concat(file), '_blank')
+    }
+</script>

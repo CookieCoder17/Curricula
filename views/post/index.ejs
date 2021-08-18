@@ -1,0 +1,71 @@
+<form name="post-form" class="form" action='/post/insert' method='post' enctype='multipart/form-data'>
+    <label for="cs"> Course Subject:</label>
+    <ul>
+        <li><input type='text' id="cs" name='courseSubject' placeholder='e.g. AMAT'></li>
+        <li class="required-error" id="cs-post-required">
+            <%if(errors){ %>
+                <%if(errors.courseSubject){%>
+                    <%= "*" + errors.courseSubject.msg %>
+                        <%}}%>
+        </li>
+    </ul>
+    <label for="cn"> Catalog Number:</label>
+    <ul>
+        <li> <input type='number' id="cn" name='catalogNumber' placeholder='e.g. the "201" part of ICSI 201'></li>
+        <li class="required-error" id="cn-required">
+            <%if(errors){ %>
+                <%if(errors.catalogNumber){%>
+                    <%= "*" + errors.catalogNumber.msg %>
+                        <%}}%>
+        </li>
+    </ul>
+    <label for="sm"> Semester:</label>
+    <ul>
+        <li>
+            <select name="semester" id="sm">
+                <option disabled selected value> -- select an option -- </option>
+                <option value='FALL'>Fall</option>
+                <option value='SPRING'>Spring</option>
+                <option value='SUMMER'>Summer</option>
+                <option value='WINTER'>Winter</option>
+            </select>
+        </li>
+        <li class="required-error" id="sem-required">
+            <%if(errors){ %>
+                <%if(errors.semester){%>
+                    <%= "*" + errors.semester.msg %>
+                        <%}}%>
+        </li>
+    </ul>
+    <label for="y"> Year Syllabus was last updated:</label>
+    <ul>
+        <li>
+            <select name="year" id="y">
+            <option disabled selected value> -- select an option -- </option>
+            <option value='2019'>2019</option>
+            <option value='2020'>2020</option>
+            <option value='2021'>2021</option>
+            <option value='2022'>2022</option>
+            <option value='2023'>2023</option>
+            <option value='2024'>2024</option>
+    </select>
+        </li>
+        <li class="required-error" id="y-required">
+            <%if(errors){ %>
+                <%if(errors.year){%>
+                    <%= "*" + errors.year.msg %>
+                        <%}}%>
+        </li>
+    </ul>
+    <label for="fn"> Syllabus File:</label>
+    <ul>
+        <li><input type='file' id="fn" name='file' accept=".doc,.docx,.pdf"></li>
+        <li class="required-error" id="fn-required">
+            <%if(errors){ %>
+                <%if(errors.file){%>
+                    <%= "*" + errors.file.msg %>
+                        <%}}%>
+        </li>
+    </ul><br>
+    <input type='submit' class="submit-button" id="postSubmit">
+</form>

@@ -1,0 +1,23 @@
+<form name="find-form" class="form" action='/find/search' method='get'>
+    <label for="cs"> Course Subject:</label>
+    <ul>
+        <li><input type='text' id="cs" name='courseSubject' placeholder='e.g. AMAT'></li>
+        <li class="required-error" id="cs-find-required">
+            <%if(errors){ %>
+                <%if(errors.courseSubject){%>
+                    <%= "*" + errors.courseSubject.msg %>
+                        <%}}%>
+        </li>
+    </ul>
+    <label for="cn"> Catalog Number:</label>
+    <ul>
+        <li> <input type='number' id="cn" name='catalogNumber' placeholder='e.g. the "201" part of ICSI 201'></li>
+        <li class="required-error" id="cn-find-required">
+            <%if(errors){ %>
+                <%if(errors.catalogNumber){%>
+                    <%= "*" + errors.catalogNumber.msg %>
+                        <%}}%>
+        </li>
+    </ul><br>
+    <input type='submit' class="submit-button" id="findSubmit">
+</form>
