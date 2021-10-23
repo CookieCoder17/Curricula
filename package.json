@@ -4,7 +4,7 @@
     "description": "Syllabus search engine where undergrads can either search for a course syllabus through it's subject and catlog number, or contribute to the database by posting a syllabus to a course",
     "main": "index.js",
     "scripts": {
-        "launch": "nodemon server.js"
+        "start": "nodemon server.js"
     },
     "author": "Adam Khoukhi",
     "license": "ISC",
